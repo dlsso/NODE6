@@ -11,6 +11,10 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
-var server = app.listen(4219, function() {
+app.get('/submit.html', function(req, res) {
+	res.render('submit');
+});
+
+var server = app.listen(3000, function() {
 	console.log('Express server listening on port ' + server.address().port);
 });
