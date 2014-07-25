@@ -24,9 +24,10 @@ app.post('/submission', function(req, res){
 		console.log("//www.youtube.com/embed/" + id)
 		return "//www.youtube.com/embed/" + id
 	}()
-	submissions.push(submission)
-	console.log(submissions)
-	res.redirect('/')
+	if (submissions.length < 8) {
+		submissions.push(submission)
+		res.redirect('/')
+	}
 })
 
 app.get('/view_submissions.html', function(req, res) {
