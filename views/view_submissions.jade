@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	.videos
+		for video in submissions
+			.video
+				h3 #{video.title} 
+				<iframe width="560" height="315" src="#{video.url}" frameborder="0" allowfullscreen></iframe>
+				p #{video.description}
+				p Submitted by: #{video.name}
+
