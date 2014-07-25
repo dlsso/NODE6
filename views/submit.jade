@@ -2,7 +2,7 @@ extends layout
 
 block content
 	h2 Enter your submission!
-	form(name="entry", action="/submission", method="post")
+	form(name="entry", action="/submission", method="post")#entry-form
 		p Your name: 
 			input(type="text", name="name")
 		p Youtube URL: 
@@ -12,5 +12,5 @@ block content
 		p Description: 
 			input(type="text", name="desc")
 		p
-			input(type="submit", value="submit")#submit
+			input(type="submit", value="submit")#submit-btn
 	p.hidden.error The maximum number of submissions has been reached!
